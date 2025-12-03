@@ -1,0 +1,59 @@
+# Ignore node modules (if using npm)
+node_modules/
+package-lock.json
+
+# Ignore environment variables
+.env
+.env.local
+.env.*.local
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# Ignore build artifacts
+dist/
+build/
+.cache/
+
+# Ignore logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore backup files
+*.bak
+*.backup
+*.tmp
+
+# Production files (if building)
+/production/
+
+# Local development files
+.local/
+.temp/
+
+# Compressed files (keep source)
+*.zip
+*.tar.gz
+*.rar
+
+# Large files (if added)
+*.mp4
+*.mov
+*.psd
+
+# Generated files
+sitemap.xml
+sitemap.xml.gz

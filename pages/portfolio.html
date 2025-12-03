@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View our portfolio of residential and commercial roofing projects in Colorado."
+    />
+    <meta property="og:title" content="Portfolio | SkyShield Roofing" />
+    <meta
+      property="og:description"
+      content="View our portfolio of residential and commercial roofing projects in Colorado."
+    />
+    <meta property="og:image" content="/assets/images/logo.svg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SkyShield Roofing",
+        "image": "/assets/images/logo.svg",
+        "url": "https://skyshield-roofing.com",
+        "telephone": "<!-- EDIT HERE: +1-303-555-0123 -->",
+        "priceRange": "$$"
+      }
+    </script>
+
+    <title data-i18n="nav_portfolio">Portfolio | SkyShield Roofing</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.ico" />
+    <link rel="preload" href="/assets/icons.svg" as="image" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: "#C5A965",
+              dark: "#1E272C",
+              muted: "#A8B3B9",
+              tech: "#4A90E2",
+            },
+            fontFamily: {
+              serif: ["Poppins", "serif"],
+              sans: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="/styles/custom.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="bg-gray-900 text-gray-100">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-40 bg-gray-900/95 backdrop-blur-md border-b border-gray-800/50"
+      style="box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4)"
+    >
+      <nav class="max-w-7xl mx-auto px-4 md:px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a
+            href="/"
+            class="flex items-center gap-2 text-2xl font-bold text-gold tracking-wider transition-transform duration-300 hover:scale-105"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <use xlink:href="/assets/icons.svg#icon-licensed"></use>
+            </svg>
+            <span>SKYSHIELD</span>
+          </a>
+
+          <div class="hidden md:flex gap-8 items-center">
+            <a
+              href="/"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_home"
+              >Home</a
+            >
+            <a
+              href="/#services"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_services"
+              >Services</a
+            >
+            <a
+              href="/pages/portfolio.html"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_portfolio"
+              >Portfolio</a
+            >
+            <a
+              href="/pages/about.html"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_about"
+              >About</a
+            >
+            <a
+              href="/pages/contact.html"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_contact"
+              >Contact</a
+            >
+
+            <button
+              onclick="toggleLanguage()"
+              class="px-4 py-2 rounded-lg bg-gold/20 text-gold border border-gold/50 hover:bg-gold/30 transition font-semibold"
+              data-i18n="nav_language"
+            >
+              ES
+            </button>
+          </div>
+
+          <div class="md:hidden flex items-center gap-4">
+            <button
+              onclick="toggleLanguage()"
+              class="px-3 py-1 rounded text-sm bg-gold/20 text-gold border border-gold/50 font-semibold"
+              data-i18n="nav_language"
+            >
+              ES
+            </button>
+            <button id="mobile-menu-button" class="text-gold text-2xl">
+              ☰
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 space-y-2 border-t border-gray-800 pt-4"
+        >
+          <a
+            href="/"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_home"
+            >Home</a
+          >
+          <a
+            href="/#services"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_services"
+            >Services</a
+          >
+          <a
+            href="/pages/portfolio.html"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_portfolio"
+            >Portfolio</a
+          >
+          <a
+            href="/pages/about.html"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_about"
+            >About</a
+          >
+          <a
+            href="/pages/contact.html"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_contact"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="py-20 md:py-28 px-4 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 text-center"
+      style="
+        background: linear-gradient(
+          135deg,
+          #0f1419 0%,
+          #1a2332 50%,
+          #1e272c 100%
+        );
+      "
+    >
+      <div class="max-w-4xl mx-auto">
+        <h1
+          class="text-5xl md:text-6xl font-bold mb-4 text-white"
+          style="
+            background: linear-gradient(135deg, #ffffff 0%, #c5a965 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+          data-i18n="portfolio_title"
+        >
+          Project Gallery
+        </h1>
+        <p
+          class="text-lg md:text-xl text-gray-300"
+          data-i18n="portfolio_subtitle"
+        >
+          View our recent residential and commercial projects
+        </p>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section
+      class="py-20 md:py-28 px-4 bg-gradient-to-b from-gray-900 to-gray-950"
+    >
+      <div class="max-w-7xl mx-auto">
+        <!-- Filter Buttons -->
+        <div
+          class="flex flex-wrap gap-4 justify-center mb-12 portfolio-filters"
+        >
+          <button
+            data-filter="all"
+            class="px-6 py-2 rounded-lg border-2 border-gold text-gold bg-gold/10 transition font-medium active"
+          >
+            <span data-i18n="portfolio_filter_all">All Projects</span>
+          </button>
+          <button
+            data-filter="residential"
+            class="px-6 py-2 rounded-lg border-2 border-gray-600 text-gray-300 hover:border-gold hover:text-gold transition font-medium"
+          >
+            <span data-i18n="portfolio_filter_residential">Residential</span>
+          </button>
+          <button
+            data-filter="commercial"
+            class="px-6 py-2 rounded-lg border-2 border-gray-600 text-gray-300 hover:border-gold hover:text-gold transition font-medium"
+          >
+            <span data-i18n="portfolio_filter_commercial">Commercial</span>
+          </button>
+        </div>
+
+        <!-- Portfolio Items Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 - Residential -->
+          <div
+            class="group relative overflow-hidden rounded-lg h-72 cursor-pointer stagger-item"
+            data-animate
+            data-portfolio-category="residential"
+            data-lightbox
+          >
+            <img
+              src="/assets/images/techadomoderno.jpg"
+              alt="Modern Shingle Roof"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(197, 169, 101, 0.1),
+                  rgba(74, 144, 226, 0.1)
+                );
+              "
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+            >
+              <h3
+                class="text-xl font-bold text-white mb-2"
+                data-i18n="portfolio_project1"
+              >
+                Modern Shingle Roof - Downtown
+              </h3>
+              <p
+                class="text-sm text-gray-200"
+                data-i18n="portfolio_project1_desc"
+              >
+                Complete residential roof replacement with architectural
+                shingles
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 - Commercial -->
+          <div
+            class="group relative overflow-hidden rounded-lg h-72 cursor-pointer stagger-item"
+            data-animate
+            data-portfolio-category="commercial"
+            data-lightbox
+          >
+            <img
+              src="/assets/images/techos_metalicos.jpg"
+              alt="Commercial Metal System"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(197, 169, 101, 0.1),
+                  rgba(74, 144, 226, 0.1)
+                );
+              "
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+            >
+              <h3
+                class="text-xl font-bold text-white mb-2"
+                data-i18n="portfolio_project2"
+              >
+                Commercial Metal System
+              </h3>
+              <p
+                class="text-sm text-gray-200"
+                data-i18n="portfolio_project2_desc"
+              >
+                Large-scale commercial metal roofing installation
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 - Residential -->
+          <div
+            class="group relative overflow-hidden rounded-lg h-72 cursor-pointer stagger-item"
+            data-animate
+            data-portfolio-category="residential"
+            data-lightbox
+          >
+            <img
+              src="/assets/images/reparacion.jpg"
+              alt="Storm Damage Restoration"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(197, 169, 101, 0.1),
+                  rgba(74, 144, 226, 0.1)
+                );
+              "
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+            >
+              <h3
+                class="text-xl font-bold text-white mb-2"
+                data-i18n="portfolio_project3"
+              >
+                Storm Damage Restoration
+              </h3>
+              <p
+                class="text-sm text-gray-200"
+                data-i18n="portfolio_project3_desc"
+              >
+                Emergency hail damage repair and restoration
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 4 - Commercial -->
+          <div
+            class="group relative overflow-hidden rounded-lg h-72 cursor-pointer stagger-item"
+            data-animate
+            data-portfolio-category="commercial"
+            data-lightbox
+          >
+            <img
+              src="/assets/images/techo-plano-cubierto-goma.jpg"
+              alt="Contemporary Flat Roof"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(197, 169, 101, 0.1),
+                  rgba(74, 144, 226, 0.1)
+                );
+              "
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+            >
+              <h3
+                class="text-xl font-bold text-white mb-2"
+                data-i18n="portfolio_project4"
+              >
+                Contemporary Flat Roof
+              </h3>
+              <p
+                class="text-sm text-gray-200"
+                data-i18n="portfolio_project4_desc"
+              >
+                Modern flat roof installation with superior drainage
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 5 - Residential -->
+          <div
+            class="group relative overflow-hidden rounded-lg h-72 cursor-pointer stagger-item"
+            data-animate
+            data-portfolio-category="residential"
+            data-lightbox
+          >
+            <img
+              src="/assets/images/tejas.jpg"
+              alt="Heritage Shingle Upgrade"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(197, 169, 101, 0.1),
+                  rgba(74, 144, 226, 0.1)
+                );
+              "
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+            >
+              <h3
+                class="text-xl font-bold text-white mb-2"
+                data-i18n="portfolio_project5"
+              >
+                Heritage Shingle Upgrade
+              </h3>
+              <p
+                class="text-sm text-gray-200"
+                data-i18n="portfolio_project5_desc"
+              >
+                Traditional home roof upgrade with premium materials
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 6 - Commercial -->
+          <div
+            class="group relative overflow-hidden rounded-lg h-72 cursor-pointer stagger-item"
+            data-animate
+            data-portfolio-category="commercial"
+            data-lightbox
+          >
+            <img
+              src="/assets/images/techos_industriales.jpg"
+              alt="Industrial Metal Roof"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(197, 169, 101, 0.1),
+                  rgba(74, 144, 226, 0.1)
+                );
+              "
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+            >
+              <h3
+                class="text-xl font-bold text-white mb-2"
+                data-i18n="portfolio_project6"
+              >
+                Industrial Metal Roof
+              </h3>
+              <p
+                class="text-sm text-gray-200"
+                data-i18n="portfolio_project6_desc"
+              >
+                Heavy-duty metal roofing for industrial facility
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-16">
+          <h3 class="text-2xl font-bold text-white mb-6">
+            Interested in working with us?
+          </h3>
+          <a
+            href="/pages/contact.html"
+            class="px-8 py-4 bg-gold text-gray-900 rounded-lg font-bold hover:bg-yellow-500 shadow-lg hover:shadow-2xl transition duration-300 inline-block btn-magnetic"
+            data-i18n="nav_contact"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800/50 py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <h4 class="text-lg font-bold text-gold mb-4">SkyShield Roofing</h4>
+            <p class="text-gray-300 text-sm">
+              Professional roofing solutions for residential and commercial
+              properties in Colorado.
+            </p>
+          </div>
+
+          <div>
+            <h4
+              class="text-lg font-bold text-gold mb-4"
+              data-i18n="footer_services_served"
+            >
+              Areas We Serve
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service1"
+                  >Denver & Surrounding Areas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service2"
+                  >Boulder County</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service3"
+                  >Fort Collins Region</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service4"
+                  >50+ Mile Radius</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-lg font-bold text-gold mb-4"
+              data-i18n="footer_contact"
+            >
+              Contact Us
+            </h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <span class="text-gray-300" data-i18n="footer_phone">Phone</span
+                >:
+                <a
+                  href="tel:+1-303-555-0123"
+                  class="text-gold hover:text-yellow-500"
+                  ><!-- EDIT HERE --></a
+                >
+              </li>
+              <li>
+                <span class="text-gray-300" data-i18n="footer_email">Email</span
+                >:
+                <a
+                  href="mailto:info@skyshield.com"
+                  class="text-gold hover:text-yellow-500"
+                  ><!-- EDIT HERE --></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800/50 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p
+            class="text-sm text-gray-500 mb-4 md:mb-0"
+            data-i18n="footer_copyright"
+          >
+            © 2024 SkyShield Roofing. All rights reserved.
+          </p>
+          <div class="flex gap-6">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-gold transition text-sm"
+              data-i18n="footer_privacy"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:text-gold transition text-sm"
+              data-i18n="footer_terms"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/scripts/i18n.js"></script>
+    <script src="/scripts/animations.js"></script>
+    <script src="/scripts/main.js"></script>
+    
+    <!-- Floating WhatsApp Icon -->
+    <a href="#" class="fixed bottom-6 left-6 z-30 bg-green-500 rounded-full w-16 h-16 flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition-colors">
+      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <use xlink:href="/assets/icons.svg#icon-whatsapp"></use>
+      </svg>
+    </a>
+  </body>
+</html>

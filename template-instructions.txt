@@ -1,0 +1,182 @@
+🎯 TEMPLATE SETUP INSTRUCTIONS FOR CLIENT
+===========================================
+
+Thank you for choosing SkyShield Roofing website template!
+
+To get your site fully customized, we'll need the following assets and information:
+
+📋 REQUIRED INFORMATION
+======================
+
+1. COMPANY DETAILS
+   ☐ Company Name (if different from "SkyShield Roofing")
+   ☐ Phone Number (format: +1-303-555-0123)
+   ☐ Email Address (contact@yourcompany.com)
+   ☐ Service Areas (e.g., "Denver, Boulder, Fort Collins")
+   ☐ Business Hours (e.g., "Mon-Fri 8AM-6PM, Sat 9AM-4PM")
+   ☐ Years in Business
+   ☐ Number of Completed Projects
+
+2. COPY & MESSAGING
+   ☐ Company Mission Statement (2-3 sentences)
+   ☐ Company Values (4 key points)
+   ☐ Services Offered (titles + short descriptions)
+   ☐ Why Choose You? (3-4 unique selling points)
+   ☐ Brief Company History/Story
+
+3. TEAM INFORMATION
+   ☐ Team Member Names & Photos (3-4 people)
+   ☐ Team Member Titles
+   ☐ Team Member Bios (1-2 sentences each)
+   ☐ Certifications & Affiliations
+
+4. TESTIMONIALS
+   ☐ 4-6 Customer Testimonials (names, locations, quotes)
+   ☐ Customer photos (optional but recommended)
+   ☐ Ratings/Stars (if available)
+
+5. PORTFOLIO/PROJECTS
+   ☐ 6+ Project Photos (residential & commercial)
+   ☐ Project Titles
+   ☐ Project Descriptions (location, scope, results)
+   ☐ Project Category (Residential/Commercial)
+
+🖼️ IMAGE REQUIREMENTS
+====================
+
+File Format: WebP (RECOMMENDED) or JPG as backup
+Quality: 72 DPI (web optimization)
+Color Space: RGB
+
+HERO IMAGE (Hero Section)
+  - Dimensions: 1200 x 800 pixels
+  - Max Size: 500 KB
+  - Content: Professional roofing project or team photo
+  - File: /assets/images/hero.webp
+
+PORTFOLIO IMAGES (Portfolio Page & Gallery)
+  - Dimensions: 800 x 600 pixels each
+  - Max Size: 300 KB each
+  - Content: 6 different roofing projects
+  - Files: /assets/images/portfolio-1.webp through portfolio-6.webp
+
+LOGO
+  - Format: SVG preferred (scalable)
+  - Alternative: PNG with transparent background (at least 500x500px)
+  - File: /assets/images/logo.svg or logo.png
+
+FAVICON
+  - Format: ICO
+  - Size: 32x32 pixels
+  - File: /assets/images/favicon.ico
+
+💡 IMAGE CREATION TIPS
+======================
+
+If you need to create professional images:
+
+1. Hero Image
+   - Show a completed roofing project (before/after preferred)
+   - Include team members (if available)
+   - Ensure bright, professional quality
+   - High contrast for readability
+
+2. Portfolio Images
+   - Mix of residential and commercial projects
+   - Show variety: shingles, metal, flat roofs, etc.
+   - Include close-ups of work quality
+   - Professional photography recommended
+
+3. Logo
+   - Simple, scalable design
+   - Works in white on dark background
+   - Consider professional designer if needed
+   - Should look good at small sizes (header)
+
+Resources:
+  - Unsplash.com (free stock photos)
+  - Pexels.com (free stock photos)
+  - Fiverr (professional designers)
+  - Canva.com (DIY design tool)
+
+✍️ COPY GUIDELINES
+==================
+
+1. Company Mission (Keep concise)
+   Bad: "We are a company that does roofing and tries to provide good service"
+   Good: "To provide exceptional roofing services with integrity, transparency, 
+          and a commitment to customer satisfaction."
+
+2. Service Descriptions (60-80 characters)
+   Bad: "Roof repair"
+   Good: "Fast, reliable repairs for damaged or aging roofs with same-day service"
+
+3. Testimonials (60-100 words)
+   Bad: "Good company"
+   Good: "SkyShield did an exceptional job replacing our roof. Professional, 
+         punctual, and the quality is outstanding. They were clean, respectful, 
+         and really treated our home with care. Highly recommended!"
+
+4. Team Bios (50-80 words)
+   Bad: "John has been in roofing for 20 years"
+   Good: "20+ years of roofing experience. GAF Master Elite certified with a passion 
+         for quality craftsmanship. Personally oversees every project from start 
+         to finish."
+
+📧 SUBMISSION CHECKLIST
+=======================
+
+Before sending assets, verify:
+
+☐ Company info is complete and accurate
+☐ All images are optimized and in correct format
+☐ Copy is proofread for grammar/spelling
+☐ Testimonials are from real customers or clearly marked as examples
+☐ All files are organized and properly named
+☐ Contact info (phone/email) is final version
+
+📤 DELIVERY METHOD
+==================
+
+Upload to shared folder or email archive containing:
+
+/company-assets/
+  ├── INFO.txt (all text info)
+  ├── hero.webp
+  ├── portfolio-1.webp
+  ├── portfolio-2.webp
+  ├── ... (more portfolio images)
+  ├── logo.svg
+  ├── favicon.ico
+  ├── testimonials.txt
+  └── team-info/
+      ├── team-member-1-photo.jpg
+      ├── team-member-2-photo.jpg
+      └── team-bios.txt
+
+🚀 NEXT STEPS
+=============
+
+1. Send assets to development team
+2. Development team customizes template
+3. Review preview on staging site
+4. Provide feedback/revisions
+5. Deploy to production
+6. Configure analytics & forms
+7. Launch!
+
+📞 QUESTIONS?
+=============
+
+Contact us with any questions about:
+  - Image specifications
+  - Copy requirements
+  - Timeline
+  - Deployment options
+
+Thank you for choosing our template! 🎉
+
+---
+
+Template Version: 1.0
+Last Updated: December 2024

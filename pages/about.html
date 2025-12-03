@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn about SkyShield Roofing - your trusted roofing contractor since 2010."
+    />
+    <meta property="og:title" content="About Us | SkyShield Roofing" />
+    <meta
+      property="og:description"
+      content="Learn about SkyShield Roofing - your trusted roofing contractor since 2010."
+    />
+    <meta property="og:image" content="/assets/images/logo.svg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SkyShield Roofing",
+        "image": "/assets/images/logo.svg",
+        "url": "https://skyshield-roofing.com",
+        "telephone": "<!-- EDIT HERE: +1-303-555-0123 -->",
+        "priceRange": "$$"
+      }
+    </script>
+
+    <title data-i18n="nav_about">About Us | SkyShield Roofing</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.ico" />
+    <link rel="preload" href="/assets/icons.svg" as="image" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: "#C5A965",
+              dark: "#1E272C",
+              muted: "#A8B3B9",
+              tech: "#4A90E2",
+            },
+            fontFamily: {
+              serif: ["Poppins", "serif"],
+              sans: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="/styles/custom.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="bg-gray-900 text-gray-100">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-40 bg-gray-900/95 backdrop-blur-md border-b border-gray-800/50"
+      style="box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4)"
+    >
+      <nav class="max-w-7xl mx-auto px-4 md:px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a
+            href="/"
+            class="flex items-center gap-2 text-2xl font-bold text-gold tracking-wider transition-transform duration-300 hover:scale-105"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <use xlink:href="/assets/icons.svg#icon-licensed"></use>
+            </svg>
+            <span>SKYSHIELD</span>
+          </a>
+
+          <div class="hidden md:flex gap-8 items-center">
+            <a
+              href="/"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_home"
+              >Home</a
+            >
+            <a
+              href="/#services"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_services"
+              >Services</a
+            >
+            <a
+              href="/pages/portfolio.html"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_portfolio"
+              >Portfolio</a
+            >
+            <a
+              href="/pages/about.html"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_about"
+              >About</a
+            >
+            <a
+              href="/pages/contact.html"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_contact"
+              >Contact</a
+            >
+
+            <button
+              onclick="toggleLanguage()"
+              class="px-4 py-2 rounded-lg bg-gold/20 text-gold border border-gold/50 hover:bg-gold/30 transition font-semibold"
+              data-i18n="nav_language"
+            >
+              ES
+            </button>
+          </div>
+
+          <div class="md:hidden flex items-center gap-4">
+            <button
+              onclick="toggleLanguage()"
+              class="px-3 py-1 rounded text-sm bg-gold/20 text-gold border border-gold/50 font-semibold"
+              data-i18n="nav_language"
+            >
+              ES
+            </button>
+            <button id="mobile-menu-button" class="text-gold text-2xl">
+              ☰
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 space-y-2 border-t border-gray-800 pt-4"
+        >
+          <a
+            href="/"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_home"
+            >Home</a
+          >
+          <a
+            href="/#services"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_services"
+            >Services</a
+          >
+          <a
+            href="/pages/portfolio.html"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_portfolio"
+            >Portfolio</a
+          >
+          <a
+            href="/pages/about.html"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_about"
+            >About</a
+          >
+          <a
+            href="/pages/contact.html"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_contact"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section
+      class="py-20 md:py-28 px-4 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 text-center"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h1
+          class="text-5xl md:text-6xl font-bold mb-4 text-white"
+          style="
+            background: linear-gradient(135deg, #ffffff 0%, #c5a965 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+          data-i18n="about_title"
+        >
+          About SkyShield Roofing
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300" data-i18n="about_hero">
+          Your Trusted Roofing Partner Since 2010
+        </p>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section
+      class="py-20 md:py-28 px-4 bg-gradient-to-b from-gray-900 to-gray-950"
+    >
+      <div class="max-w-3xl mx-auto" data-animate>
+        <p
+          class="text-lg text-gray-300 leading-relaxed mb-8"
+          data-i18n="about_intro"
+        >
+          At SkyShield Roofing, we believe that quality craftsmanship and honest
+          service are the foundation of any successful business. For over a
+          decade, we've been protecting Colorado homes and businesses with
+          superior roofing solutions.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
+          <!-- Mission -->
+          <div
+            class="p-8 rounded-lg bg-gray-800/40 border border-gray-700/50 stagger-item"
+            data-animate
+          >
+            <h3
+              class="text-2xl font-bold text-gold mb-4"
+              data-i18n="about_mission"
+            >
+              Our Mission
+            </h3>
+            <p
+              class="text-gray-300 leading-relaxed"
+              data-i18n="about_mission_text"
+            >
+              To provide exceptional roofing services with integrity,
+              transparency, and a commitment to customer satisfaction. We treat
+              every project like our own home.
+            </p>
+          </div>
+
+          <!-- Values -->
+          <div
+            class="p-8 rounded-lg bg-gray-800/40 border border-gray-700/50 stagger-item"
+            data-animate
+          >
+            <h3
+              class="text-2xl font-bold text-gold mb-4"
+              data-i18n="about_values"
+            >
+              Our Values
+            </h3>
+            <ul class="space-y-2 text-gray-300">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-gold flex-shrink-0 mt-1"
+                  fill="currentColor"
+                >
+                  <use xlink:href="/assets/icons.svg#icon-check"></use>
+                </svg>
+                <span data-i18n="about_value1"
+                  >Excellence in every project, no matter the size</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-gold flex-shrink-0 mt-1"
+                  fill="currentColor"
+                >
+                  <use xlink:href="/assets/icons.svg#icon-check"></use>
+                </svg>
+                <span data-i18n="about_value2"
+                  >Transparent pricing and honest communication</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-gold flex-shrink-0 mt-1"
+                  fill="currentColor"
+                >
+                  <use xlink:href="/assets/icons.svg#icon-check"></use>
+                </svg>
+                <span data-i18n="about_value3"
+                  >Licensed, insured, and fully accountable</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-gold flex-shrink-0 mt-1"
+                  fill="currentColor"
+                >
+                  <use xlink:href="/assets/icons.svg#icon-check"></use>
+                </svg>
+                <span data-i18n="about_value4"
+                  >Warranty on all workmanship</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section
+      class="py-20 md:py-28 px-4 bg-gradient-to-b from-gray-950 to-gray-900"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-4xl md:text-5xl font-bold mb-16 text-center text-white"
+          style="
+            background: linear-gradient(135deg, #ffffff 0%, #c5a965 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+          data-i18n="about_team_title"
+        >
+          Meet Our Team
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Team Member 1 -->
+          <div
+            class="text-center p-8 rounded-lg bg-gray-800/40 border border-gray-700/50 hover:border-gold/30 transition stagger-item"
+            data-animate
+          >
+            <div class="flex justify-center mb-4">
+              <svg class="w-12 h-12 text-gold" fill="currentColor">
+                <use xlink:href="/assets/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Michael Torres</h3>
+            <p class="text-gold mb-4" data-i18n="about_team_lead">
+              Project Lead & Founder
+            </p>
+            <p class="text-sm text-gray-300">
+              20+ years of roofing experience. GAF Master Elite certified with a
+              passion for quality.
+            </p>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div
+            class="text-center p-8 rounded-lg bg-gray-800/40 border border-gray-700/50 hover:border-gold/30 transition stagger-item"
+            data-animate
+          >
+            <div class="flex justify-center mb-4">
+              <svg class="w-12 h-12 text-gold" fill="currentColor">
+                <use xlink:href="/assets/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Sarah Johnson</h3>
+            <p class="text-gold mb-4" data-i18n="about_team_manager">
+              Operations Manager
+            </p>
+            <p class="text-sm text-gray-300">
+              Ensures every project runs smoothly with exceptional customer
+              service.
+            </p>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div
+            class="text-center p-8 rounded-lg bg-gray-800/40 border border-gray-700/50 hover:border-gold/30 transition stagger-item"
+            data-animate
+          >
+            <div class="flex justify-center mb-4">
+              <svg class="w-12 h-12 text-gold" fill="currentColor">
+                <use xlink:href="/assets/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">David Martinez</h3>
+            <p class="text-gold mb-4" data-i18n="about_team_supervisor">
+              Lead Supervisor
+            </p>
+            <p class="text-sm text-gray-300">
+              Expert installation specialist with OSHA certification and 15+
+              years experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section
+      class="py-20 md:py-28 px-4 bg-gradient-to-b from-gray-900 to-gray-950"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h2
+          class="text-4xl font-bold mb-12 text-center text-white"
+          style="
+            background: linear-gradient(135deg, #ffffff 0%, #c5a965 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+          data-i18n="about_certifications"
+        >
+          Certifications & Affiliations
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div
+            class="p-6 rounded-lg bg-gray-800/40 border border-gray-700/50 hover:border-gold/50 transition flex items-center gap-4 stagger-item"
+            data-animate
+          >
+            <svg class="w-8 h-8 text-gold flex-shrink-0" fill="currentColor">
+              <use xlink:href="/assets/icons.svg#icon-award"></use>
+            </svg>
+            <div>
+              <h4 class="font-bold text-white" data-i18n="about_cert1">
+                Colorado Roofing Association Member
+              </h4>
+              <p class="text-sm text-gray-400">
+                Active member committed to industry standards
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="p-6 rounded-lg bg-gray-800/40 border border-gray-700/50 hover:border-gold/50 transition flex items-center gap-4 stagger-item"
+            data-animate
+          >
+            <svg class="w-8 h-8 text-gold flex-shrink-0" fill="currentColor">
+              <use xlink:href="/assets/icons.svg#icon-award"></use>
+            </svg>
+            <div>
+              <h4 class="font-bold text-white" data-i18n="about_cert2">
+                GAF Master Elite Contractor
+              </h4>
+              <p class="text-sm text-gray-400">
+                Top-rated certified contractor network
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="p-6 rounded-lg bg-gray-800/40 border border-gray-700/50 hover:border-gold/50 transition flex items-center gap-4 stagger-item"
+            data-animate
+          >
+            <svg class="w-8 h-8 text-gold flex-shrink-0" fill="currentColor">
+              <use xlink:href="/assets/icons.svg#icon-check"></use>
+            </svg>
+            <div>
+              <h4 class="font-bold text-white" data-i18n="about_cert3">
+                OSHA Certified
+              </h4>
+              <p class="text-sm text-gray-400">
+                Safety-first approach to every project
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="p-6 rounded-lg bg-gray-800/40 border border-gray-700/50 hover:border-gold/50 transition flex items-center gap-4 stagger-item"
+            data-animate
+          >
+            <svg class="w-8 h-8 text-gold flex-shrink-0" fill="currentColor">
+              <use xlink:href="/assets/icons.svg#icon-briefcase"></use>
+            </svg>
+            <div>
+              <h4 class="font-bold text-white" data-i18n="about_cert4">
+                General Contractor License
+              </h4>
+              <p class="text-sm text-gray-400">
+                State licensed and fully insured
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-20 md:py-28 px-4 bg-gradient-to-b from-gray-950 to-gray-900 text-center"
+    >
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold mb-6 text-white">
+          Ready to work with the experts?
+        </h2>
+        <p class="text-lg text-gray-300 mb-8">
+          Contact us for a free inspection and estimate.
+        </p>
+        <a
+          href="/pages/contact.html"
+          class="px-8 py-4 bg-gold text-gray-900 rounded-lg font-bold hover:bg-yellow-500 shadow-lg hover:shadow-2xl transition duration-300 inline-block btn-magnetic"
+          data-i18n="nav_contact"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800/50 py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <h4 class="text-lg font-bold text-gold mb-4">SkyShield Roofing</h4>
+            <p class="text-gray-300 text-sm">
+              Professional roofing solutions for residential and commercial
+              properties in Colorado.
+            </p>
+          </div>
+
+          <div>
+            <h4
+              class="text-lg font-bold text-gold mb-4"
+              data-i18n="footer_services_served"
+            >
+              Areas We Serve
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service1"
+                  >Denver & Surrounding Areas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service2"
+                  >Boulder County</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service3"
+                  >Fort Collins Region</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service4"
+                  >50+ Mile Radius</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-lg font-bold text-gold mb-4"
+              data-i18n="footer_contact"
+            >
+              Contact Us
+            </h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <span class="text-gray-300" data-i18n="footer_phone">Phone</span
+                >:
+                <a
+                  href="tel:+1-303-555-0123"
+                  class="text-gold hover:text-yellow-500"
+                  ><!-- EDIT HERE --></a
+                >
+              </li>
+              <li>
+                <span class="text-gray-300" data-i18n="footer_email">Email</span
+                >:
+                <a
+                  href="mailto:info@skyshield.com"
+                  class="text-gold hover:text-yellow-500"
+                  ><!-- EDIT HERE --></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800/50 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p
+            class="text-sm text-gray-500 mb-4 md:mb-0"
+            data-i18n="footer_copyright"
+          >
+            © 2024 SkyShield Roofing. All rights reserved.
+          </p>
+          <div class="flex gap-6">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-gold transition text-sm"
+              data-i18n="footer_privacy"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:text-gold transition text-sm"
+              data-i18n="footer_terms"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/scripts/i18n.js"></script>
+    <script src="/scripts/animations.js"></script>
+    <script src="/scripts/main.js"></script>
+    
+    <!-- Floating WhatsApp Icon -->
+    <a href="#" class="fixed bottom-6 left-6 z-30 bg-green-500 rounded-full w-16 h-16 flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition-colors">
+      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <use xlink:href="/assets/icons.svg#icon-whatsapp"></use>
+      </svg>
+    </a>
+  </body>
+</html>

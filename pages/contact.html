@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact SkyShield Roofing for a free estimate or consultation."
+    />
+    <meta property="og:title" content="Contact Us | SkyShield Roofing" />
+    <meta
+      property="og:description"
+      content="Contact SkyShield Roofing for a free estimate or consultation."
+    />
+    <meta property="og:image" content="/assets/images/logo.svg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SkyShield Roofing",
+        "image": "/assets/images/logo.svg",
+        "url": "https://skyshield-roofing.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Denver",
+          "addressRegion": "CO"
+        },
+        "telephone": "<!-- EDIT HERE: +1-303-555-0123 -->",
+        "priceRange": "$$"
+      }
+    </script>
+
+    <title data-i18n="nav_contact">Contact Us | SkyShield Roofing</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.ico" />
+    <link rel="preload" href="/assets/icons.svg" as="image" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: "#C5A965",
+              dark: "#1E272C",
+              muted: "#A8B3B9",
+              tech: "#4A90E2",
+            },
+            fontFamily: {
+              serif: ["Poppins", "serif"],
+              sans: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="/styles/custom.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="bg-gray-900 text-gray-100">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-40 bg-gray-900/95 backdrop-blur-md border-b border-gray-800/50"
+      style="box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4)"
+    >
+      <nav class="max-w-7xl mx-auto px-4 md:px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a
+            href="/"
+            class="flex items-center gap-2 text-2xl font-bold text-gold tracking-wider transition-transform duration-300 hover:scale-105"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <use xlink:href="/assets/icons.svg#icon-licensed"></use>
+            </svg>
+            <span>SKYSHIELD</span>
+          </a>
+
+          <div class="hidden md:flex gap-8 items-center">
+            <a
+              href="/"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_home"
+              >Home</a
+            >
+            <a
+              href="/#services"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_services"
+              >Services</a
+            >
+            <a
+              href="/pages/portfolio.html"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_portfolio"
+              >Portfolio</a
+            >
+            <a
+              href="/pages/about.html"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_about"
+              >About</a
+            >
+            <a
+              href="/pages/contact.html"
+              class="text-gray-200 hover:text-gold transition duration-300 font-medium"
+              data-i18n="nav_contact"
+              >Contact</a
+            >
+
+            <button
+              onclick="toggleLanguage()"
+              class="px-4 py-2 rounded-lg bg-gold/20 text-gold border border-gold/50 hover:bg-gold/30 transition font-semibold"
+              data-i18n="nav_language"
+            >
+              ES
+            </button>
+          </div>
+
+          <div class="md:hidden flex items-center gap-4">
+            <button
+              onclick="toggleLanguage()"
+              class="px-3 py-1 rounded text-sm bg-gold/20 text-gold border border-gold/50 font-semibold"
+              data-i18n="nav_language"
+            >
+              ES
+            </button>
+            <button id="mobile-menu-button" class="text-gold text-2xl">
+              ☰
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 space-y-2 border-t border-gray-800 pt-4"
+        >
+          <a
+            href="/"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_home"
+            >Home</a
+          >
+          <a
+            href="/#services"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_services"
+            >Services</a
+          >
+          <a
+            href="/pages/portfolio.html"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_portfolio"
+            >Portfolio</a
+          >
+          <a
+            href="/pages/about.html"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_about"
+            >About</a
+          >
+          <a
+            href="/pages/contact.html"
+            class="block px-4 py-2 text-gray-200 hover:text-gold hover:bg-gray-800/50 transition rounded"
+            data-i18n="nav_contact"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section
+      class="py-20 md:py-28 px-4 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 text-center"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h1
+          class="text-5xl md:text-6xl font-bold mb-4 text-white"
+          style="
+            background: linear-gradient(135deg, #ffffff 0%, #c5a965 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+          data-i18n="contact_title"
+        >
+          Contact SkyShield Roofing
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-gray-300"
+          data-i18n="contact_subtitle"
+        >
+          Get in touch for a free estimate or inspection
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      class="py-20 md:py-28 px-4 bg-gradient-to-b from-gray-900 to-gray-950"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <!-- Call Info -->
+          <div
+            class="p-8 rounded-lg bg-gray-800/40 border border-gray-700/50 text-center hover:border-gold/50 transition stagger-item"
+            data-animate
+          >
+            <div class="flex justify-center mb-4">
+              <svg class="w-10 h-10 text-gold" fill="currentColor">
+                <use xlink:href="/assets/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-bold text-gold mb-2"
+              data-i18n="contact_call_us"
+            >
+              Call Us
+            </h3>
+            <p class="text-gray-300 mb-4">
+              <a
+                href="tel:+1-303-555-0123"
+                class="hover:text-gold transition font-semibold"
+                ><!-- EDIT HERE: +1-303-555-0123 --></a
+              >
+            </p>
+            <p class="text-sm text-gray-400" data-i18n="contact_response">
+              Response Time: Within 24 hours
+            </p>
+          </div>
+
+          <!-- Email Info -->
+          <div
+            class="p-8 rounded-lg bg-gray-800/40 border border-gray-700/50 text-center hover:border-gold/50 transition stagger-item"
+            data-animate
+          >
+            <div class="flex justify-center mb-4">
+              <svg class="w-10 h-10 text-gold" fill="currentColor">
+                <use xlink:href="/assets/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-bold text-gold mb-2"
+              data-i18n="contact_email_us"
+            >
+              Email Us
+            </h3>
+            <p class="text-gray-300 mb-4">
+              <a
+                href="mailto:info@skyshield.com"
+                class="hover:text-gold transition font-semibold"
+                ><!-- EDIT HERE: info@skyshield.com --></a
+              >
+            </p>
+            <p class="text-sm text-gray-400">Professional inquiries welcome</p>
+          </div>
+
+          <!-- Service Area -->
+          <div
+            class="p-8 rounded-lg bg-gray-800/40 border border-gray-700/50 text-center hover:border-gold/50 transition stagger-item"
+            data-animate
+          >
+            <div class="flex justify-center mb-4">
+              <svg class="w-10 h-10 text-gold" fill="currentColor">
+                <use xlink:href="/assets/icons.svg#icon-location"></use>
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-bold text-gold mb-2"
+              data-i18n="contact_visit_us"
+            >
+              Service Area
+            </h3>
+            <p class="text-gray-300 mb-4" data-i18n="contact_address">
+              Denver Metro Area & Beyond
+            </p>
+            <p class="text-sm text-gray-400" data-i18n="footer_service4">
+              50+ Mile Radius
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="max-w-2xl mx-auto" data-animate>
+          <h2
+            class="text-3xl font-bold text-white mb-8 text-center"
+            data-i18n="contact_form_title"
+          >
+            Send us a Message
+          </h2>
+
+          <form
+            name="contact-page"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            data-form
+            class="bg-gray-800/40 border border-gray-700/50 p-8 md:p-12 rounded-xl backdrop-blur-md"
+          >
+            <input type="hidden" name="form-name" value="contact-page" />
+            <input type="hidden" name="bot-field" />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label
+                  class="block text-sm font-semibold text-gray-200 mb-2"
+                  data-i18n="form_name"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600/50 text-white placeholder-gray-500 transition focus:outline-none focus:border-gold/50 focus:ring-2 focus:ring-gold/20"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-semibold text-gray-200 mb-2"
+                  data-i18n="form_email"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600/50 text-white placeholder-gray-500 transition focus:outline-none focus:border-gold/50 focus:ring-2 focus:ring-gold/20"
+                  placeholder="john@example.com"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label
+                  class="block text-sm font-semibold text-gray-200 mb-2"
+                  data-i18n="form_phone"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600/50 text-white placeholder-gray-500 transition focus:outline-none focus:border-gold/50 focus:ring-2 focus:ring-gold/20"
+                  placeholder="(303) 555-0123"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-semibold text-gray-200 mb-2"
+                  data-i18n="form_zip"
+                  >ZIP Code</label
+                >
+                <input
+                  type="text"
+                  name="zip"
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600/50 text-white placeholder-gray-500 transition focus:outline-none focus:border-gold/50 focus:ring-2 focus:ring-gold/20"
+                  placeholder="80202"
+                />
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label
+                class="block text-sm font-semibold text-gray-200 mb-2"
+                data-i18n="form_service"
+                >Service Needed</label
+              >
+              <select
+                name="service"
+                class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600/50 text-white transition focus:outline-none focus:border-gold/50 focus:ring-2 focus:ring-gold/20"
+              >
+                <option value="repair" data-i18n="form_service_repair">
+                  Roof Repair
+                </option>
+                <option
+                  value="replacement"
+                  data-i18n="form_service_replacement"
+                >
+                  Roof Replacement
+                </option>
+                <option value="storm" data-i18n="form_service_storm">
+                  Storm Damage
+                </option>
+                <option value="other" data-i18n="form_service_other">
+                  Other
+                </option>
+              </select>
+            </div>
+
+            <div class="mb-6">
+              <label
+                class="block text-sm font-semibold text-gray-200 mb-2"
+                data-i18n="form_message"
+                >Message</label
+              >
+              <textarea
+                name="message"
+                rows="5"
+                class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600/50 text-white placeholder-gray-500 transition focus:outline-none focus:border-gold/50 focus:ring-2 focus:ring-gold/20 resize-none"
+                placeholder="Tell us about your roofing needs..."
+              ></textarea>
+            </div>
+
+            <!-- Success Message -->
+            <div
+              class="hidden mb-6 p-4 rounded-lg bg-green-500/20 border border-green-500/50 text-green-200 flex items-center gap-3"
+              data-success-message
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <use xlink:href="/assets/icons.svg#icon-check"></use>
+              </svg>
+              <span data-i18n="form_success"
+                >Thank you! We'll contact you within 24 hours.</span
+              >
+            </div>
+
+            <!-- Error Message -->
+            <div
+              class="hidden mb-6 p-4 rounded-lg bg-red-500/20 border border-red-500/50 text-red-200 flex items-center gap-3"
+              data-error-message
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <use xlink:href="/assets/icons.svg#icon-close"></use>
+              </svg>
+              <span data-i18n="form_error"
+                >Please fill in all fields correctly.</span
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="w-full px-8 py-4 bg-gold text-gray-900 rounded-lg font-bold hover:bg-yellow-500 shadow-lg hover:shadow-2xl transition duration-300 text-lg btn-magnetic"
+              data-i18n="form_submit"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <section
+      class="py-20 md:py-28 px-4 bg-gradient-to-b from-gray-950 to-gray-900"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">
+          Our Service Area
+        </h2>
+        <div
+          class="bg-gray-800/40 border border-gray-700/50 rounded-lg overflow-hidden h-96"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102927.85747147393!2d-104.82325934863281!3d39.7392307744696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C%20CO!5e0!3m2!1sen!2sus!4v1234567890"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800/50 py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <h4 class="text-lg font-bold text-gold mb-4">SkyShield Roofing</h4>
+            <p class="text-gray-300 text-sm">
+              Professional roofing solutions for residential and commercial
+              properties in Colorado.
+            </p>
+          </div>
+
+          <div>
+            <h4
+              class="text-lg font-bold text-gold mb-4"
+              data-i18n="footer_services_served"
+            >
+              Areas We Serve
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service1"
+                  >Denver & Surrounding Areas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service2"
+                  >Boulder County</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service3"
+                  >Fort Collins Region</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-gold transition text-sm"
+                  data-i18n="footer_service4"
+                  >50+ Mile Radius</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-lg font-bold text-gold mb-4"
+              data-i18n="footer_contact"
+            >
+              Contact Us
+            </h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <span class="text-gray-300" data-i18n="footer_phone">Phone</span
+                >:
+                <a
+                  href="tel:+1-303-555-0123"
+                  class="text-gold hover:text-yellow-500"
+                  ><!-- EDIT HERE --></a
+                >
+              </li>
+              <li>
+                <span class="text-gray-300" data-i18n="footer_email">Email</span
+                >:
+                <a
+                  href="mailto:info@skyshield.com"
+                  class="text-gold hover:text-yellow-500"
+                  ><!-- EDIT HERE --></a
+                >
+              </li>
+              <li>
+                <span class="text-gray-300" data-i18n="footer_hours">Hours</span
+                >:
+                <span class="text-gray-400" data-i18n="footer_hours_detail"
+                  >Mon-Fri 8AM-6PM, Sat 9AM-4PM</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800/50 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p
+            class="text-sm text-gray-500 mb-4 md:mb-0"
+            data-i18n="footer_copyright"
+          >
+            © 2024 SkyShield Roofing. All rights reserved.
+          </p>
+          <div class="flex gap-6">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-gold transition text-sm"
+              data-i18n="footer_privacy"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:text-gold transition text-sm"
+              data-i18n="footer_terms"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/scripts/i18n.js"></script>
+    <script src="/scripts/animations.js"></script>
+    <script src="/scripts/main.js"></script>
+    
+    <!-- Floating WhatsApp Icon -->
+    <a href="#" class="fixed bottom-6 left-6 z-30 bg-green-500 rounded-full w-16 h-16 flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition-colors">
+      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <use xlink:href="/assets/icons.svg#icon-whatsapp"></use>
+      </svg>
+    </a>
+  </body>
+</html>

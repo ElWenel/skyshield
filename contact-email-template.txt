@@ -1,0 +1,174 @@
+Subject: Website Assets Needed - SkyShield Roofing Template
+
+Dear Client,
+
+To customize your professional roofing contractor website, we need the following assets and information from you. This email template can be personalized and sent directly to the client.
+
+---
+
+Hi [CLIENT_NAME],
+
+Thank you for choosing our SkyShield Roofing website template! We're excited to get your site up and running.
+
+To complete the customization, we need some information and assets from you. Please provide the following:
+
+📋 BUSINESS INFORMATION
+=======================
+
+1. Company Details
+   - Your company name
+   - Phone number (primary contact)
+   - Email address (lead contact)
+   - Service areas (cities/regions you cover)
+   - Years in business
+   - Number of completed projects (approximate)
+
+2. Company Description
+   - Brief mission statement (1-2 sentences)
+   - What makes you different from competitors (2-3 points)
+   - Your company values (3-4 key values)
+
+3. Services You Offer
+   For each service, provide:
+   - Service name
+   - One sentence description
+   Example: "Roof Repair: Fast, reliable repairs for damaged or aging roofs"
+
+🖼️ IMAGES NEEDED
+=================
+
+Please provide high-quality professional images:
+
+1. Hero Image
+   - A stunning photo of a completed roofing project OR your team at work
+   - Size: 1200 x 800 pixels (landscape)
+   - Format: JPG or WebP
+   - This is the main image visitors see first!
+
+2. Portfolio Images
+   - 6 photos of your best completed projects
+   - Size: 800 x 600 pixels each
+   - Show variety: residential, commercial, different roof types
+   - Include 3 residential + 3 commercial if possible
+   - Format: JPG or WebP each
+
+3. Company Logo
+   - Your company logo
+   - Format: SVG (scalable vector) or PNG with transparent background
+   - Should look good in a header and footer
+   - Size: At least 500 x 500 pixels
+
+4. Favicon (Optional)
+   - Your company logo/icon as a small square
+   - Used as browser tab icon
+   - Format: ICO
+   - Size: 32 x 32 pixels
+
+💬 TESTIMONIALS
+================
+
+Please provide 4-6 customer testimonials:
+
+For each testimonial:
+- Customer's full name
+- Their city/state
+- Their quote (60-100 words)
+- 5-star rating (if available)
+
+Example:
+"John Smith
+Denver, CO
+'SkyShield did an exceptional job replacing our roof. Professional, punctual, 
+and the quality is outstanding. Highly recommended!' - 5 stars"
+
+👥 TEAM INFORMATION (Optional)
+==============================
+
+If you'd like to showcase your team:
+
+For each team member:
+- Full name
+- Job title
+- Professional photo (headshot)
+- 1-2 sentence bio
+
+📧 CERTIFICATIONS (Optional)
+=============================
+
+Any certifications, memberships, or awards:
+- GAF certification
+- Roofing association memberships
+- Industry awards
+- Insurance certifications
+- Safety certifications
+
+⏰ SUBMISSION TIMELINE
+=======================
+
+Please send all assets by: [DATE]
+Expected launch date: [DATE]
+
+📤 HOW TO SUBMIT
+=================
+
+Option 1: Email
+- Zip all files and email to: [YOUR_EMAIL]
+- Max attachment size: 25 MB
+
+Option 2: Cloud Storage
+- Upload to shared Google Drive folder: [LINK]
+- Or Dropbox: [LINK]
+
+Option 3: File Transfer
+- Use WeTransfer.com (free, no account needed)
+- Send to: [YOUR_EMAIL]
+
+💡 IMAGE QUALITY TIPS
+======================
+
+✓ Use professional photography (ideally high-resolution originals)
+✓ Ensure good lighting and clear focus
+✓ Show finished work quality
+✓ Crop to dimensions exactly (not stretched)
+✓ Use JPEG or WebP format for best compression
+✓ Aim for under 500 KB per image
+
+If you need design help:
+- Canva.com - DIY design tool
+- Unsplash.com - Free stock photos
+- Pexels.com - Free stock photos
+- Fiverr.com - Affordable designers
+
+❓ QUESTIONS?
+==============
+
+If you have questions about what's needed or how to provide assets, please reply to this email or call us at [YOUR_PHONE].
+
+Here's what we'll do next:
+1. Receive your assets
+2. Customize the template with your info
+3. Send preview for your review
+4. Make revisions based on your feedback
+5. Deploy your live site!
+
+We're excited to launch your new website! 🚀
+
+Best regards,
+
+[YOUR_NAME]
+[YOUR_TITLE]
+[YOUR_COMPANY]
+[YOUR_PHONE]
+[YOUR_EMAIL]
+
+---
+
+P.S. The website will include:
+✓ Mobile-responsive design (looks great on phone, tablet, desktop)
+✓ Bilingual support (English & Spanish)
+✓ Contact form that sends leads to you
+✓ Portfolio gallery with filters
+✓ Testimonials carousel
+✓ About & team pages
+✓ SEO optimized for Google rankings
+✓ Smooth animations & professional design

@@ -1,0 +1,43 @@
+{
+  "name": "skyshield-roofing",
+  "version": "1.0.0",
+  "description": "Premium roofing contractor website - SkyShield Roofing",
+  "type": "module",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "start:node": "npx http-server",
+    "build": "echo 'No build step needed - static site'",
+    "deploy": "echo 'Deploy to Netlify or Vercel via git push'",
+    "lint": "echo 'Run your linter here'",
+    "test": "echo 'Run your tests here'"
+  },
+  "keywords": [
+    "roofing",
+    "contractor",
+    "landing-page",
+    "static-site",
+    "tailwindcss",
+    "alpinejs",
+    "netlify"
+  ],
+  "author": "Your Name/Company",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/roofing-project-skyshield.git"
+  },
+  "devDependencies": {
+    "comment": "This project uses CDN imports and requires NO build dependencies",
+    "note": "All CSS and JS are loaded from CDN (Tailwind, Alpine.js, GSAP)"
+  },
+  "dependencies": {
+    "comment": "Runtime dependencies loaded via CDN"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ]
+}
