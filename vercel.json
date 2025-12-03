@@ -3,24 +3,6 @@
   "outputDirectory": ".",
   "installCommand": "echo 'No dependencies to install'",
   "public": false,
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/pages/index.html"
-    },
-    {
-      "source": "/pages",
-      "destination": "/pages/index.html"
-    },
-    {
-      "source": "/pages/",
-      "destination": "/pages/index.html"
-    },
-    {
-      "source": "/pages/index.html",
-      "destination": "/"
-    }
-  ],
   "headers": [
     {
       "source": "/assets/(.*)",
