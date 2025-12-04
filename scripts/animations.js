@@ -134,18 +134,27 @@ function initCounterAnimation() {
 // Portfolio image lightbox
 function initPortfolioLightbox() {
   const portfolioImages = document.querySelectorAll("[data-lightbox]");
+
+  console.log("Portfolio lightbox items found:", portfolioImages.length);
   
   if (portfolioImages.length === 0) {
     console.log("No portfolio lightbox items found");
     return;
   }
 
-  portfolioImages.forEach((item) => {
+  portfolioImages.forEach((item, index) => {
     item.style.cursor = "pointer";
+    
+    // Debug: Log what we found
+    const imgElement = item.querySelector("img");
+    if (imgElement) {
+      console.log(`Item ${index}: Image src =`, imgElement.src, "alt =", imgElement.alt);
+    }
+    
     item.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
-      
+
       // Get the image from inside the item
       const imgElement = item.querySelector("img");
       if (!imgElement) {
@@ -153,30 +162,42 @@ function initPortfolioLightbox() {
         return;
       }
 
-      const imgSrc = imgElement.src;
-      const imgAlt = imgElement.alt || "Portfolio Image";
+      // Get the src - ensure it's not undefined
+      let imgSrc = imgElement.src;
+      let imgAlt = imgElement.alt || "Portfolio Image";
       
-      console.log("Opening lightbox with image:", imgSrc);
+      // Double check src is valid
+      if (!imgSrc || imgSrc === "undefined") {
+        console.error("Image src is invalid:", imgSrc);
+        imgSrc = imgElement.getAttribute("src");
+      }
+
+      console.log("Opening lightbox with image src:", imgSrc, "alt:", imgAlt);
 
       const modal = document.createElement("div");
       modal.className =
         "fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm";
+      
+      // Sanitize the src for use in template literal
+      const safeSrc = imgSrc.replace(/"/g, '&quot;');
+      const safeAlt = imgAlt.replace(/"/g, '&quot;');
+      
       modal.innerHTML = `
         <div class="relative max-w-4xl w-full bg-gray-900 rounded-lg overflow-hidden">
           <button class="absolute top-4 right-4 text-white hover:text-gold transition z-10 text-2xl font-bold" onclick="this.closest('.fixed').remove()">
             ×
           </button>
-          <img src="${imgSrc}" alt="${imgAlt}" class="w-full h-auto" onerror="console.error('Image failed to load: ${imgSrc}')">
-          <p class="p-4 text-white text-center text-sm">${imgAlt}</p>
+          <img src="${safeSrc}" alt="${safeAlt}" class="w-full h-auto" onerror="console.error('Image failed to load:', this.src)">
+          <p class="p-4 text-white text-center text-sm">${safeAlt}</p>
         </div>
       `;
 
       document.body.appendChild(modal);
-      
+
       modal.addEventListener("click", (e) => {
         if (e.target === modal) modal.remove();
       });
-      
+
       // Close on ESC key
       const closeOnEsc = (e) => {
         if (e.key === "Escape") {
