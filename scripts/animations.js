@@ -136,7 +136,7 @@ function initPortfolioLightbox() {
   const portfolioImages = document.querySelectorAll("[data-lightbox]");
 
   console.log("Portfolio lightbox items found:", portfolioImages.length);
-  
+
   if (portfolioImages.length === 0) {
     console.log("No portfolio lightbox items found");
     return;
@@ -144,13 +144,18 @@ function initPortfolioLightbox() {
 
   portfolioImages.forEach((item, index) => {
     item.style.cursor = "pointer";
-    
+
     // Debug: Log what we found
     const imgElement = item.querySelector("img");
     if (imgElement) {
-      console.log(`Item ${index}: Image src =`, imgElement.src, "alt =", imgElement.alt);
+      console.log(
+        `Item ${index}: Image src =`,
+        imgElement.src,
+        "alt =",
+        imgElement.alt
+      );
     }
-    
+
     item.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -162,14 +167,15 @@ function initPortfolioLightbox() {
         return;
       }
 
-      // Get the src - ensure it's not undefined
+      // Get the src - the .src property already gives us the full URL
       let imgSrc = imgElement.src;
       let imgAlt = imgElement.alt || "Portfolio Image";
-      
-      // Double check src is valid
-      if (!imgSrc || imgSrc === "undefined") {
+
+      // Ensure src is valid
+      if (!imgSrc || imgSrc === "undefined" || imgSrc === "") {
         console.error("Image src is invalid:", imgSrc);
-        imgSrc = imgElement.getAttribute("src");
+        alert("Error loading image. Please try again.");
+        return;
       }
 
       console.log("Opening lightbox with image src:", imgSrc, "alt:", imgAlt);
@@ -177,18 +183,26 @@ function initPortfolioLightbox() {
       const modal = document.createElement("div");
       modal.className =
         "fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm";
-      
-      // Sanitize the src for use in template literal
-      const safeSrc = imgSrc.replace(/"/g, '&quot;');
-      const safeAlt = imgAlt.replace(/"/g, '&quot;');
-      
+
+      // Use the full URL directly - no need to sanitize for URLs
       modal.innerHTML = `
         <div class="relative max-w-4xl w-full bg-gray-900 rounded-lg overflow-hidden">
           <button class="absolute top-4 right-4 text-white hover:text-gold transition z-10 text-2xl font-bold" onclick="this.closest('.fixed').remove()">
             ×
           </button>
-          <img src="${safeSrc}" alt="${safeAlt}" class="w-full h-auto" onerror="console.error('Image failed to load:', this.src)">
-          <p class="p-4 text-white text-center text-sm">${safeAlt}</p>
+          <div class="relative bg-gray-800 flex items-center justify-center min-h-96">
+            <img 
+              src="${imgSrc}" 
+              alt="${imgAlt}" 
+              class="w-full h-auto max-h-screen object-contain" 
+              onerror="
+                this.parentElement.innerHTML = '<div class=\"flex flex-col items-center justify-center text-white p-8 w-full\"><p class=\"text-lg mb-4\">⚠️ Error loading image</p><p class=\"text-sm text-gray-300\">The image file could not be loaded. Please try again.</p><p class=\"text-xs text-gray-500 mt-4\">URL: ${imgSrc}</p></div>';
+                console.error('Image failed to load from lightbox:', this.src);
+              "
+              onload="console.log('Image loaded successfully:', this.src)"
+            >
+          </div>
+          <p class="p-4 text-white text-center text-sm">${imgAlt}</p>
         </div>
       `;
 
