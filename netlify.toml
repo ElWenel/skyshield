@@ -6,6 +6,21 @@
   framework = "static"
 
 [[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/styles/*"
+  to = "/styles/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/scripts/*"
+  to = "/scripts/:splat"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/pages/index.html"
   status = 200
