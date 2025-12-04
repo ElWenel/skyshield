@@ -140,10 +140,10 @@ function initPortfolioLightbox() {
       // Get the image from inside the item
       const imgElement = item.querySelector("img");
       if (!imgElement) return;
-      
+
       const imgSrc = imgElement.src;
       const imgAlt = imgElement.alt || "Portfolio Image";
-      
+
       const modal = document.createElement("div");
       modal.className =
         "fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm";
