@@ -30,5 +30,15 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/pages/index.html"
+    },
+    {
+      "source": "/((?!assets|pages|styles|scripts).*)",
+      "destination": "/pages/index.html"
+    }
   ]
 }
