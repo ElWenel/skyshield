@@ -33,10 +33,6 @@
   ],
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/pages/index.html"
-    },
-    {
       "source": "/portfolio",
       "destination": "/pages/portfolio.html"
     },
@@ -47,10 +43,6 @@
     {
       "source": "/contact",
       "destination": "/pages/contact.html"
-    },
-    {
-      "source": "/((?!assets|pages|styles|scripts|vercel\\.json|netlify\\.toml|\\.git).*)",
-      "destination": "/pages/index.html"
     }
   ]
 }
