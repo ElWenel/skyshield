@@ -135,8 +135,15 @@ function initCounterAnimation() {
 function initPortfolioLightbox() {
   const portfolioImages = document.querySelectorAll("[data-lightbox]");
 
-  portfolioImages.forEach((img) => {
-    img.addEventListener("click", () => {
+  portfolioImages.forEach((item) => {
+    item.addEventListener("click", () => {
+      // Get the image from inside the item
+      const imgElement = item.querySelector("img");
+      if (!imgElement) return;
+      
+      const imgSrc = imgElement.src;
+      const imgAlt = imgElement.alt || "Portfolio Image";
+      
       const modal = document.createElement("div");
       modal.className =
         "fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm";
@@ -145,8 +152,8 @@ function initPortfolioLightbox() {
           <button class="absolute top-4 right-4 text-white hover:text-gold transition z-10 text-2xl font-bold" onclick="this.closest('.fixed').remove()">
             ×
           </button>
-          <img src="${img.src}" alt="${img.alt}" class="w-full h-auto">
-          <p class="p-4 text-white text-center text-sm">${img.alt}</p>
+          <img src="${imgSrc}" alt="${imgAlt}" class="w-full h-auto">
+          <p class="p-4 text-white text-center text-sm">${imgAlt}</p>
         </div>
       `;
 
