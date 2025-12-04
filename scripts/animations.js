@@ -167,13 +167,22 @@ function initPortfolioLightbox() {
         return;
       }
 
-      // Get the src - the .src property already gives us the full URL
-      let imgSrc = imgElement.src;
-      let imgAlt = imgElement.alt || "Portfolio Image";
+      // IMPORTANT: Get src from the data attribute first, then from the HTML attribute, then from .src property
+      let imgSrc = imgElement.dataset.src || imgElement.getAttribute("src") || imgElement.src;
+      let imgAlt = imgElement.alt || imgElement.getAttribute("alt") || "Portfolio Image";
+
+      // Debug logging
+      console.log("imgElement:", imgElement);
+      console.log("imgSrc attempts:", {
+        dataset: imgElement.dataset.src,
+        attribute: imgElement.getAttribute("src"),
+        property: imgElement.src
+      });
 
       // Ensure src is valid
       if (!imgSrc || imgSrc === "undefined" || imgSrc === "") {
         console.error("Image src is invalid:", imgSrc);
+        console.error("Full imgElement:", imgElement.outerHTML);
         alert("Error loading image. Please try again.");
         return;
       }
