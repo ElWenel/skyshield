@@ -131,104 +131,51 @@ function initCounterAnimation() {
   counterObserver.observe(counterSection);
 }
 
-// Portfolio image lightbox
+// Portfolio image lightbox - Simple version
 function initPortfolioLightbox() {
   const portfolioImages = document.querySelectorAll("[data-lightbox]");
 
-  console.log("Portfolio lightbox items found:", portfolioImages.length);
-
-  if (portfolioImages.length === 0) {
-    console.log("No portfolio lightbox items found");
-    return;
-  }
-
-  portfolioImages.forEach((item, index) => {
+  portfolioImages.forEach((item) => {
     item.style.cursor = "pointer";
-
-    // Debug: Log what we found
-    const imgElement = item.querySelector("img");
-    if (imgElement) {
-      console.log(
-        `Item ${index}: Image src =`,
-        imgElement.src,
-        "alt =",
-        imgElement.alt
-      );
-    }
 
     item.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
 
-      // Get the image from inside the item
       const imgElement = item.querySelector("img");
-      if (!imgElement) {
-        console.warn("No image found in lightbox item");
-        return;
-      }
+      if (!imgElement) return;
 
-      // IMPORTANT: Get src from the data attribute first, then from the HTML attribute, then from .src property
-      let imgSrc = imgElement.dataset.src || imgElement.getAttribute("src") || imgElement.src;
-      let imgAlt = imgElement.alt || imgElement.getAttribute("alt") || "Portfolio Image";
+      // Get image source from the actual img element
+      const imgSrc = imgElement.currentSrc || imgElement.src;
+      const imgAlt = imgElement.alt || "Portfolio Image";
 
-      // Debug logging
-      console.log("imgElement:", imgElement);
-      console.log("imgSrc attempts:", {
-        dataset: imgElement.dataset.src,
-        attribute: imgElement.getAttribute("src"),
-        property: imgElement.src
-      });
-
-      // Ensure src is valid
-      if (!imgSrc || imgSrc === "undefined" || imgSrc === "") {
-        console.error("Image src is invalid:", imgSrc);
-        console.error("Full imgElement:", imgElement.outerHTML);
-        alert("Error loading image. Please try again.");
-        return;
-      }
-
-      console.log("Opening lightbox with image src:", imgSrc, "alt:", imgAlt);
-
+      // Create and show modal
       const modal = document.createElement("div");
-      modal.className =
-        "fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm";
+      modal.className = "fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4";
 
-      // Use the full URL directly - no need to sanitize for URLs
       modal.innerHTML = `
-        <div class="relative max-w-4xl w-full bg-gray-900 rounded-lg overflow-hidden">
-          <button class="absolute top-4 right-4 text-white hover:text-gold transition z-10 text-2xl font-bold" onclick="this.closest('.fixed').remove()">
+        <div class="relative max-w-5xl w-full">
+          <button class="absolute -top-12 right-0 text-white hover:text-gold text-4xl font-bold" onclick="this.closest('.fixed').remove()">
             ×
           </button>
-          <div class="relative bg-gray-800 flex items-center justify-center min-h-96">
-            <img 
-              src="${imgSrc}" 
-              alt="${imgAlt}" 
-              class="w-full h-auto max-h-screen object-contain" 
-              onerror="
-                this.parentElement.innerHTML = '<div class=\"flex flex-col items-center justify-center text-white p-8 w-full\"><p class=\"text-lg mb-4\">⚠️ Error loading image</p><p class=\"text-sm text-gray-300\">The image file could not be loaded. Please try again.</p><p class=\"text-xs text-gray-500 mt-4\">URL: ${imgSrc}</p></div>';
-                console.error('Image failed to load from lightbox:', this.src);
-              "
-              onload="console.log('Image loaded successfully:', this.src)"
-            >
-          </div>
-          <p class="p-4 text-white text-center text-sm">${imgAlt}</p>
+          <img src="${imgSrc}" alt="${imgAlt}" class="w-full h-auto rounded-lg">
         </div>
       `;
 
       document.body.appendChild(modal);
 
+      // Close on background click
       modal.addEventListener("click", (e) => {
         if (e.target === modal) modal.remove();
       });
 
       // Close on ESC key
-      const closeOnEsc = (e) => {
+      document.addEventListener("keydown", function closeOnEsc(e) {
         if (e.key === "Escape") {
           modal.remove();
           document.removeEventListener("keydown", closeOnEsc);
         }
-      };
-      document.addEventListener("keydown", closeOnEsc);
+      });
     });
   });
 }
