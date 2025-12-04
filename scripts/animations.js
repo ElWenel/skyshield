@@ -134,15 +134,29 @@ function initCounterAnimation() {
 // Portfolio image lightbox
 function initPortfolioLightbox() {
   const portfolioImages = document.querySelectorAll("[data-lightbox]");
+  
+  if (portfolioImages.length === 0) {
+    console.log("No portfolio lightbox items found");
+    return;
+  }
 
   portfolioImages.forEach((item) => {
-    item.addEventListener("click", () => {
+    item.style.cursor = "pointer";
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
       // Get the image from inside the item
       const imgElement = item.querySelector("img");
-      if (!imgElement) return;
+      if (!imgElement) {
+        console.warn("No image found in lightbox item");
+        return;
+      }
 
       const imgSrc = imgElement.src;
       const imgAlt = imgElement.alt || "Portfolio Image";
+      
+      console.log("Opening lightbox with image:", imgSrc);
 
       const modal = document.createElement("div");
       modal.className =
@@ -152,15 +166,25 @@ function initPortfolioLightbox() {
           <button class="absolute top-4 right-4 text-white hover:text-gold transition z-10 text-2xl font-bold" onclick="this.closest('.fixed').remove()">
             ×
           </button>
-          <img src="${imgSrc}" alt="${imgAlt}" class="w-full h-auto">
+          <img src="${imgSrc}" alt="${imgAlt}" class="w-full h-auto" onerror="console.error('Image failed to load: ${imgSrc}')">
           <p class="p-4 text-white text-center text-sm">${imgAlt}</p>
         </div>
       `;
 
       document.body.appendChild(modal);
+      
       modal.addEventListener("click", (e) => {
         if (e.target === modal) modal.remove();
       });
+      
+      // Close on ESC key
+      const closeOnEsc = (e) => {
+        if (e.key === "Escape") {
+          modal.remove();
+          document.removeEventListener("keydown", closeOnEsc);
+        }
+      };
+      document.addEventListener("keydown", closeOnEsc);
     });
   });
 }
