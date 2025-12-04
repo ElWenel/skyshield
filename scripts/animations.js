@@ -145,20 +145,29 @@ function initPortfolioLightbox() {
       const imgElement = item.querySelector("img");
       if (!imgElement) return;
 
-      // Get image source from the actual img element
-      const imgSrc = imgElement.currentSrc || imgElement.src;
-      const imgAlt = imgElement.alt || "Portfolio Image";
+      // Get image source directly from HTML attribute - most reliable method
+      const imgSrc = imgElement.getAttribute("src");
+      const imgAlt = imgElement.getAttribute("alt") || "Portfolio Image";
+
+      // Validate that we have a proper src
+      if (!imgSrc || imgSrc === "undefined" || imgSrc === "") {
+        console.error("No valid image source found");
+        return;
+      }
+
+      console.log("Opening lightbox with image:", imgSrc);
 
       // Create and show modal
       const modal = document.createElement("div");
-      modal.className = "fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4";
+      modal.className =
+        "fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4";
 
       modal.innerHTML = `
         <div class="relative max-w-5xl w-full">
           <button class="absolute -top-12 right-0 text-white hover:text-gold text-4xl font-bold" onclick="this.closest('.fixed').remove()">
             ×
           </button>
-          <img src="${imgSrc}" alt="${imgAlt}" class="w-full h-auto rounded-lg">
+          <img src="${imgSrc}" alt="${imgAlt}" class="w-full h-auto rounded-lg" loading="lazy">
         </div>
       `;
 
