@@ -2,7 +2,7 @@
   "buildCommand": "echo 'Static site - no build required'",
   "outputDirectory": ".",
   "installCommand": "echo 'No dependencies to install'",
-  "public": false,
+  "public": true,
   "headers": [
     {
       "source": "/assets/(.*)",
