@@ -52,6 +52,7 @@ yarn-error.log*
 # Large files (if added)
 *.mp4
 !assets/images/Luxury_Home_Drone_Reveal.mp4
+!assets/images/WhatsApp Video 2025-12-12 at 6.28.29 PM.mp4
 *.mov
 *.psd
 
