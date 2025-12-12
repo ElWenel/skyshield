@@ -112,18 +112,21 @@
       <nav class="max-w-7xl mx-auto px-4 md:px-6 py-4">
         <div class="flex items-center justify-between">
           <!-- Logo -->
-          <a
-            href="/"
-            class="flex items-center gap-2 text-2xl font-bold text-gold tracking-wider transition-transform duration-300 hover:scale-105"
-          >
-            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-                fill="currentColor"
-              ></path>
-            </svg>
-            <span>SKYSHIELD</span>
-          </a>
+          <div class="flex items-center gap-4">
+            <a
+              href="/"
+              class="flex items-center gap-2 text-2xl font-bold text-gold tracking-wider transition-transform duration-300 hover:scale-105"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>SKYSHIELD</span>
+            </a>
+            <span class="hidden sm:inline-block text-xs text-gray-500 border-l border-gray-700 pl-3" data-i18n="watermark">Developed by CodeKey Solutions</span>
+          </div>
 
           <!-- Desktop Navigation -->
           <div class="hidden md:flex gap-8 items-center">
@@ -233,7 +236,14 @@
         loop
         playsinline
         class="absolute w-full h-full object-cover"
-        style="z-index: 0; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%;"
+        style="
+          z-index: 0;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          min-width: 100%;
+          min-height: 100%;
+        "
       >
         <source
           src="/assets/images/WhatsApp Video 2025-12-12 at 6.28.29 PM.mp4"

@@ -8,6 +8,7 @@ const translations = {
     nav_about: "About",
     nav_contact: "Contact",
     nav_language: "ES",
+    watermark: "Developed by CodeKey Solutions",
 
     // Hero Section
     hero_title: "Expert Roofing Services",
@@ -183,6 +184,7 @@ const translations = {
     nav_about: "Acerca De",
     nav_contact: "Contacto",
     nav_language: "EN",
+    watermark: "Desarrollado por CodeKey Solutions",
 
     // Sección Hero
     hero_title: "Soluciones Premium de Techado",
