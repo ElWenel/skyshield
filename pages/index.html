@@ -225,16 +225,23 @@
     <!-- Hero Section -->
     <section
       class="hero relative min-h-screen flex items-center justify-center py-20 overflow-hidden"
-      style="
-        background: url('/assets/images/Gestion-de-Contratistas.jpg') no-repeat
-          center center;
-        background-size: cover;
-      "
     >
-      <!-- Background blur effect (only image) -->
+      <!-- Video Background -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+        style="z-index: 0;"
+      >
+        <source src="/assets/images/Luxury_Home_Drone_Reveal.mp4" type="video/mp4">
+      </video>
+
+      <!-- Dark overlay for opacity effect -->
       <div
-        class="absolute inset-0 backdrop-blur-xl"
-        style="background: rgba(0, 0, 0, 0.4)"
+        class="absolute inset-0"
+        style="background: rgba(0, 0, 0, 0.55); z-index: 1;"
       ></div>
 
       <div

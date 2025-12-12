@@ -75,7 +75,10 @@ async function handleFormSubmit(e) {
         // Accept any response (Netlify handles it)
         showSuccess(form, successMessage);
       } catch (netlifyError) {
-        console.log("Netlify forms not available, trying alternative method", netlifyError);
+        console.log(
+          "Netlify forms not available, trying alternative method",
+          netlifyError
+        );
         // Fallback to showing success anyway since this might be on Netlify
         showSuccess(form, successMessage);
       }
