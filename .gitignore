@@ -51,6 +51,7 @@ yarn-error.log*
 
 # Large files (if added)
 *.mp4
+!assets/images/Luxury_Home_Drone_Reveal.mp4
 *.mov
 *.psd
 
